@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* h1{
+            color: red;
+        } */
+         #btn{}
+    </style>
+</head>
+<body>
+    <h1>This is my heading tag</h1>
+    <button>Click</button>
+
+    <script>
+    //     document.getElementById("btn")onclick=function(){
+    // //    console.log("Hello Java Script")
+    //    alert("Hello I am Java Script")
+    //    document.getElementById("h").style.color="Red"
+    // }
+    //    document.write("Java Script")
+
+    // variables
+    // a=[]
+    // console.log(typeof a)
+    // console.log(a)
+    
+    // var a = 10;
+    //  var a=100
+    // //  a=120
+    //  console.log(a)
+    // let b = 20;
+    // // let b = 50;->gives error
+    // b = 50;
+    // console.log(b)
+    // const c = 30;
+    // // c = 80;
+    // console.log(c)
+
+
+    //   {
+    //     var a = 10;
+    //     console.log(a)
+    //   }
+    //   console.log(a)
+
+
+      {
+        let b = 10;
+        console.log(b)
+      }
+    //   console.log(b)->error
+      {
+        const c=10;
+        console.log(c)
+      }
+    //   console.log(c)->error
+
+
+    // var i = 10;
+    // for(var i=0;i<5;i++){
+    // }
+    // console.log(i)
+
+
+    // let i=10;
+    // for(let i=0;i<5;i++){
+    // }
+    // console.log(i)
+
+    // output()
+    // function output(){
+    //     console.log("Hello Java Script")
+    // }
+
+    // console.log(a=10)
+    // // let a;->Error
+    // var a;
+
+
+    //  console.log(10<5)
+    //  console.log(5<=5)
+    //  console.log('A'>'B')
+    //  console.log('a'<'b')
+    //  console.log('5'==5)
+    //  console.log('5'===5)
+    //  console.log('7'!==7)
+    //  console.log('7'!=7)
+    //  console.log(5!=5)
+    //  console.log(3**2) 
+    //  3**2 gives 3 to the power 2
+
+    let age = 18;
+    if(age>=18){
+        console.log("Allowed to vote")
+    }
+    else if(age>=10 && age<18){
+        console.log("Half vote")
+    }
+    else{
+        console.log("get elder first")
+    } 
+    
+    // let a = 5;
+    // let b = 6;
+    // let c = 2;
+    // let d = 9;
+    // if(a>b){
+    //     if(a>c){
+    //         if(a>d){
+    //             console.log("a is greatest")
+    //         }
+    //     }
+    // }
+    // if(b>a){
+    //     if(b>c){
+    //         if(b>d){
+    //             console.log("b is greatest")
+    //         }
+    //     }
+    // }
+    // if(c>a){
+    //     if(c>b){
+    //         if(c>d){
+    //             console.log("c is greatest")
+    //         }
+    //     }
+    // }
+    // if(d>a){
+    //     if(d>b){
+    //         if(d>c){
+    //             console.log("d is greatest")
+    //         }
+    //     }
+    // }
+
+    // let x=5;
+    // do{
+    //     console.log("Hello Java Script")
+    // }while(x==5);
+
+    // let y=0;
+    // while(false){
+    //     console.log(y)
+    //     y++
+    // }
+    // for(let z=0;z<5;z++){
+    //     
+    // }
+
+    // function Output(a=200,b=100){
+    //     return a+b
+    //     console.log(a+b)
+    // }
+    // console.log(Output(10,20))
+    // let ans = Output();
+    // console.log(ans)
+
+    // (function(a,b){
+    //     // console.log("Hello Java Script function",a+b)
+    //     console.log(`Hello Java Script function,${a+b}`)
+    // })(10,20)
+    (function(a,b){
+        // console.log("Hello Java Script function",a+b)
+        console.log(`Hello Java Script function,${a-b}`)
+    })(10,20)
+
+    // let f1=function(a,b){
+    //     console.log(a+b)
+    // };
+    // let f2=function(a,b){
+    //     console.log(a-b);
+    // };
+    // f1(10,20);
+    // f2(30,40);
+
+
+    // let ans=f1(10,20)
+    // console.log(ans)
+    // f2(30,40); 
+    
+
+    // let f1=(a,b)=>{
+    //     return a+b
+    // }
+    // or
+    // let f1=(a,b)=>a+b
+    // console.log(f1(10,20))
+    
+
+//     function outer(){
+//     let a=10;
+//     let b=20;
+//     function inner(){
+//         console.log(a+b)
+//     }
+//     return inner;
+// }
+// let ans=outer();
+// // ans()
+// console.log(ans)
+
+
+// function f1(a){
+//     console.log(a)
+//     a()
+// }
+// function f2(){
+//     console.log("Hello I am f2 function")
+// }
+// f1(f2)
+
+
+// function output(x,y,z){
+//     z(x,y)
+// }
+// function add(a,b){
+//     console.log(a+b)
+// }
+// output(10,20,add)
+
+ 
+
+function output(f1){
+console.log(f1)
+    // f1()
+ }
+ output(function(){
+    console.log("Hey Java Script !!!")
+ })
+   </script>
+</body>
+</html>
