@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(45deg, black, white);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .calc{
+    background: black;
+    padding: 25px;
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px white;
+  }
+  
+  .calc_output{
+    font-size: 50px;
+    text-align: end;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    background: white;
+    color: black;
+    border: 2px  white;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px gray;
+  }
+  
+  .calc_keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 10px;
+  }
+  
+  button{
+    background-color: white;
+    color: black;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+    box-shadow: 0px 3px 15px white;
+  }
+  
+  .calc_enter {
+    grid-column: span 2;
+    width: 100%;
+    border-radius: 30px;
+    background: orange;
+  }
+  
+  .operator{
+    background:  orange;
+  }
+  
+  .key1{
+    background-color: black;
+    color: white;
+  }
+    </style>
+</head>
+<body>
+    <div class="calc">
+        <div class="calc_output">0
+        </div>
+        <div class="calc_keys">
+            <button class="operator">+</button>
+            <button class="operator">-</button>
+            <button class="operator">%</button>
+            <button class="operator">/</button>
+            <button class="key">7</button>
+            <button class="key">8</button>
+            <button class="key">9</button>
+            <button class="key">4</button>
+            <button class="key">5</button>
+            <button class="key">6</button>
+            <button class="key">1</button>
+            <button class="key">2</button>
+            <button class="key">3</button>
+            <button class="key">0</button>
+            <button class="key">.</button>
+            <button class="key1">AC</button>
+            <button class="key1">DEL</button>
+            <button class="calc_enter">=</button>
+        </div>
+    </div>
+</body>
+</html>
