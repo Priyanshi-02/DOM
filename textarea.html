@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            height: 50vh;
+            width: 50vh;
+            border: 2px solid black;
+        } 
+       #text{
+        height: 40vh;
+        width: 50vh;
+        margin-bottom: 40px;
+       }
+       .inp{
+        margin-bottom: 20px;
+       }
+    </style>
+</head>
+<body>
+    <textarea id="text" rows="10" cols="20"></textarea>
+    <h1>CSS Properties</h1>
+    <input type="text" class="inp" id="inp1" placeholder="color">
+    <input type="text" class="inp" id="inp2" placeholder="background color">
+    <input type="text" class="inp" id="inp3" placeholder="font size">
+    <div class="box1" id="text1"></div>
+    <div id="total">Total letters:</div>
+    <script>
+        document.getElementById("text").oninput=function(){
+            let text=document.getElementById("text").value;
+            console.log(text)
+            document.getElementById("text1").innerText=text;
+        }
+        document.getElementById("inp1").oninput=function(){
+            let color=document.getElementById("inp1").value;
+            document.getElementById("text1").style.color=color;
+        }
+        document.getElementById("inp2").oninput=function(){
+            let bgcolor=document.getElementById("inp2").value;
+            document.getElementById("text1").style.backgroundColor=bgcolor;
+        }
+        document.getElementById("inp3").oninput=function(){
+            let size=document.getElementById("inp3").value;
+            document.getElementById("text1").style.fontSize=size+"px";
+        }
+        // document.getElementById("text").oninput=function(){
+        //     let text=document.getElementById("text").value;
+        //     document.getElementById("total").innerHTML=`Total Letters: ${text.length}`
+        // }
+    </script>
+</body>
+</html>

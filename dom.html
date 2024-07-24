@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <input type="text">
+        <button>Submit</button>
+    </div>
+    <script>
+        // document.querySelector("button").onclick=function(){
+        //     let val=document.querySelector("input").value;
+        //     document.querySelector("h1").innerHTML=val;
+        // }
+        // document.querySelector("button").onclick=function(){
+        //     let val=document.querySelector("input").value;
+        //     let h=document.createElement("h1");
+        //     h.innerHTML=val;
+        //     document.querySelector(".container").append(h);
+        // };
+
+        document.querySelector("button").onclick=function(){
+            let val=document.querySelector("input").value;
+            let h=document.createElement("h1");
+            h.innerHTML=val;
+            h.className="box";
+            document.querySelector(".container").append(h);
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input{
+            border: 2px solid black;
+            margin-top: 300px;
+            background-color: white;
+            width: 40%;
+            height: 50vh;
+        }
+        .inp{
+            margin-top: 20px;
+            margin-left: 20px;
+            height: 30px;
+            width: 300px;
+        }
+        #label{
+            margin-left: 20px;
+            font-size: 25px;
+        }
+        #inp5{
+            margin-bottom: 20px;
+        }
+        .card{
+            border: 2px solid black;
+            background-color: white;
+            width: 40%;
+            height: 50vh;
+            margin-left: 800px;
+            margin-top: -370px;
+        }
+        .img{
+            border-radius: 50%;
+            border: 2px solid black;
+            height: 20vh;
+            width: 200px;
+            margin-top: 80px;
+            margin-left: 20px;
+        }
+        ul{
+            margin-top: -130px;
+            margin-left: 250px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="input">
+        <label type="" id="label">Image:</label>
+        <input type="text" class="inp" id="inp1" placeholder="Enter image link"><br>
+        <label type="" id="label">Name:</label>
+        <input type="text" class="inp" id="inp2" placeholder="Enter Your Name"><br>
+        <label type="" id="label">Email:</label>
+        <input type="text" class="inp" id="inp3" placeholder="Enter Your Email"><br>
+        <label type="" id="label">Course:</label>
+        <input type="text" class="inp" id="inp4" placeholder="Enter Your Course"><br>
+        <label type="" id="label">Mobile:</label>
+        <input type="text" class="inp" id="inp5" placeholder="Enter Your Mobile">
+    </div>
+    <div class="card">
+        <div class="img"></div>
+        <ul type="disc">
+            <li>Name:</li>
+            <li>Email:</li>
+            <li>Course:</li>
+            <li>Mobile:</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("inp1").oninput=function(){
+            let val=document.getElementsByClassName("input");
+            for(let i=0;i<val.length;i++){
+                console.log(val[i].value)
+            }
+        }
+    </script>
+</body>
+</html>

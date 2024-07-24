@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: -800px;
+    border: 2px solid black;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-top: -300px;
+    margin-left: -300px;
+    margin-bottom: 20px;
+}
+
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    <div class="input-section">
+        <input type="text" id="colorInput" placeholder="Enter color">
+        <input type="number" id="numberInput" placeholder="Enter box number" min="1" max="8">
+        <button id="applyButton">Apply </button>
+    </div>
+    <div class="container">
+        <div class="grid">
+            <div class="box" id="box1"></div>
+            <div class="box" id="box2"></div>
+            <div class="box" id="box3"></div>
+            <div class="box" id="box4"></div>
+            <div class="box" id="box5"></div>
+            <div class="box" id="box6"></div>
+            <div class="box" id="box7"></div>
+            <div class="box" id="box8"></div>
+        </div>
+        
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const colorInput = document.getElementById('colorInput');
+    const numberInput = document.getElementById('numberInput');
+    const applyButton = document.getElementById('applyButton');
+
+    applyButton.addEventListener('click', () => {
+        const color = colorInput.value;
+        const number = parseInt(numberInput.value);
+
+        if (number >= 1 && number <= 8) {
+            const box = document.getElementById(`box${number}`);
+            box.style.backgroundColor = color;
+        } 
+        else {
+            alert('Please enter a valid box number between 1 and 8.');
+        }
+    });
+});
+
+    </script>
+</body>
+</html>

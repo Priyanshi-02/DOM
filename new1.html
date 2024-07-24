@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box{
+            height: 50%;
+            width: 30%;
+            border: 2px solid black;
+            margin:auto;
+            margin-top: 300px;
+        }
+        #uppercase{
+            height: 30px;
+            width: 100px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        #lowercase{
+            height: 30px;
+            width: 100px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        p{
+            text-align: left;
+            margin: 10px 10px 10px 10px;
+        }
+        #inc{
+            height: 30px;
+            width: 30px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        #dec{
+            height: 30px;
+            width: 30px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        #color #range{
+            height: 30px;
+            width: 40px;
+            align-items: center;
+            margin: 10px 10px 10px 10px;
+        }
+        .box1{
+            height: 80vh;
+            width: 50vh;
+            border: 2px solid black;
+        } 
+       #text{
+        height: 50vh;
+        width: 40vh;
+        margin-bottom: 40px;
+       }*/
+        body{
+            margin: 0px;
+            padding: 0px;
+            color: red;
+            background-color: rgba(27, 15, 9, 0.186);
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+       .box{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        border: 2px solid black;
+        box-shadow: 0px 0px 10px red;
+       }
+       .input{
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       }
+       button{
+        margin-left: 20px;
+        margin-bottom: 10px;
+        width: 350px;
+        height: 40px;
+       background-color: peachpuff; 
+       }
+    </style>
+</head>
+<body>
+   <div class="main" >
+    <div class="box">
+    <div class="input">
+        <input type="text" class="inp" id="inp1" placeholder="Enter Your Name">
+        <input type="text" class="inp" id="inp2" placeholder="Enter Your Email">
+        <input type="text" class="inp" id="inp3" placeholder="Enter Your Age">
+        <input type="text" class="inp" id="inp4" placeholder="Enter Your Mobile No">
+        <input type="text" class="inp" id="inp5" placeholder="Enter Your City">
+        <input type="text" class="inp" id="inp6" placeholder="Enter Your Pin Code">
+    </div>
+    <button id="btn">Submit</button>
+</div>
+</div>
+    <!-- <textarea id="text" rows="10" cols="20"></textarea>
+    <div class="box1" id="text1"></div>
+    <div class="box" id="myBox">
+    <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque illum adipisci iste consequuntur asperiores debitis quia repellendus sed dolore nobis, reprehenderit voluptate, veritatis ipsam esse saepe, minima vero in pariatur!
+    </p>
+    <button id="uppercase">Uppercase</button>
+    <button id="lowercase">lowercase</button>
+    <button id="inc">+</button>
+    <button id="dec">-</button>
+    <input type="color" id="color">
+    <input type="range" id="range">
+
+    <script>
+        let counter=0;
+        document.getElementById("inc").onclick = function(){
+            document.getElementById("para").style.fontSize=counter+"px"
+            counter++;
+            console.log(counter+"px")
+        }
+        document.getElementById("dec").onclick = function(){
+            document.getElementById("para").style.fontSize=counter+"px"
+            counter--;
+            console.log(counter+"px")
+        }
+        document.getElementById("uppercase").onclick = function(){
+            document.getElementById("para").style.textTransform="uppercase"
+            console.log("uppercase")
+        }
+        document.getElementById("lowercase").onclick = function(){
+            document.getElementById("para").style.textTransform="lowercase"
+            console.log("lowercase")
+        }
+        document.getElementById("color").oninput=function(){
+        let color=document.getElementById("color").value;
+            console.log(color)
+            document.getElementById("myBox").style.backgroundColor=color;
+        }
+        // document.getElementById("text").oninput=function(){
+        //     let text=document.getElementById("text").value;
+        //     console.log(text)
+        //     document.getElementById("text1").innerText=text
+        // }
+        // document.getElementById("range").oninput=function(){
+        // let range=document.getElementById("range").value;
+        //     console.log(color)
+        // counter++;
+        // couneter--;
+        //     document.getElementById("para").style.fontSize=counter+"px";
+        // }
+        document.getElementById("text").oninput=function(){
+            let text=document.getElementById("text").value;
+            console.log(text)
+            document.getElementById("text1").innerHTML=`<h1>${text}</h1>`;
+        }
+    </script> -->
+    <script>
+        // document.getElementById("btn").onclick=function(){
+        //     let val=document.getElementById("inp").value;
+        //     document.getElementById("inp").value='';
+        //     document.getElementById("inp").focus();
+        //     console.log(val)
+        // }
+
+        document.getElementById("btn").onclick=function(){
+            let val=document.getElementsByClassName("inp");
+            for(let i=0;i<val.length;i++){
+                console.log(val[i].value)
+            }
+            // console.log(val)
+            // for(let i of val){
+            //     console.log(i)
+            // }
+        }
+    </script>
+</body>
+</html>
